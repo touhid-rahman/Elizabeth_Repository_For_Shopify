@@ -1,0 +1,21 @@
+http: //127.0.0.1:9292
+shopify theme dev --store=dev-1-wv9jh11j.myshopify.com
+shopify theme dev
+npx @tailwindcss/cli -i ./src/tailwind.css -o ./assets/application.css --watch
+npx concurrently "shopify theme dev" "npx @tailwindcss/cli -i ./src/tailwind.css -o ./assets/application.css --watch"
+
+"dev": "concurrently \"shopify theme dev\" \"tailwindcss -i ./src/tailwind.css -o ./assets/application.css --watch\"",
+npm i -D concurrently
+npm run dev
+
+git
+git init
+git config --global core.autocrlf false
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/touhid-rahman/Elizabeth_Repository_For_Shopify.git
+
+git add .
+git commit -m "update header.liquid"
+git push
